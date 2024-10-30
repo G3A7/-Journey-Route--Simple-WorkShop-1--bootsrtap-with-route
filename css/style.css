@@ -1,0 +1,129 @@
+:root {
+  --main-color: #333;
+  --second-color: palevioletred;
+}
+
+/* html{
+  scroll-padding: ;
+} */
+
+body {
+  font-family: "Nunito Sans", sans-serif;
+  font-family: "Montserrat", sans-serif;
+}
+
+.navbar-nav .nav-item .nav-link:hover {
+  color: palevioletred;
+}
+
+.navbar-nav .nav-item .nav-link.active {
+  color: palevioletred;
+}
+
+#home {
+  background-image: url("../imgs/header-bg.jpg");
+  background-color: #333333cf;
+  background-blend-mode: multiply;
+  background-position: center;
+  background-size: cover;
+  background-repeat: no-repeat;
+  color: #fff;
+}
+.mx-w-p-home,
+.mx-w-p-client {
+  max-width: 450px;
+}
+.btn-hover-home:hover {
+  background-color: #fff;
+  color: #333 !important;
+}
+.top-fixed-35 {
+  top: 35%;
+}
+.circle-pill {
+  width: 45px;
+  height: 90px;
+  top: 70%;
+  animation: circle-down 1s infinite ease-in-out;
+  cursor: pointer;
+}
+.circle-pill::after {
+  content: "";
+  position: absolute;
+  top: 80%;
+  left: 50%;
+  transform: translate(-50%, -50%);
+  width: 10px;
+  height: 10px;
+  background-color: #fff;
+  border-radius: 50%;
+}
+
+@keyframes circle-down {
+  0% {
+    transform: translateY(50px);
+  }
+  50% {
+    transform: translateY(20px);
+  }
+  100% {
+    transform: translateY(50px);
+  }
+}
+.bg-color-client {
+  background-color: #ddd;
+}
+#carouselExampleIndicators .carousel-indicators {
+  bottom: -35px;
+}
+.carousel-indicators [data-bs-target] {
+  background-color: var(--second-color) !important ;
+  height: 10px !important;
+}
+.carousel-indicators [data-bs-target].active {
+  width: 45px;
+  border-radius: 8px;
+}
+.nav-pills .nav-link.active {
+  background-color: palevioletred;
+  border-radius: 50px;
+}
+
+.inner {
+  overflow: hidden;
+}
+.over-lay {
+  background-color: rgba(0, 0, 0, 0.7);
+  opacity: 0;
+  transition: opacity 0.5s;
+}
+.over-lay .caption {
+  transform: translateY(250px);
+  /* top: 250px; */
+  transition: transform 0.5s;
+}
+.inner img {
+  transition: transform 0.5s;
+}
+.inner:hover img {
+  transform: scale(1.4);
+}
+.inner:hover .over-lay {
+  opacity: 1;
+}
+.inner:hover .over-lay .caption {
+  /* top: 0;/ */
+  transform: translateY(0);
+}
+
+.bg-main {
+  color: var(--second-color);
+}
+
+.center {
+  background-color: var(--second-color);
+}
+footer p{
+ margin: 0;
+ padding-bottom: 5px !important ;
+}
